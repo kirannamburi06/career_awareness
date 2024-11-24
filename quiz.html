@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz: Discover Your Future</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <h2>Take the Quiz</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="quiz-section">
+      <h2>Take the Career Quiz</h2>
+      <p>Answer these questions to help us understand your interests and guide you in your career choices.</p>
+      
+      <form id="quiz-form">
+        <div class="question">
+          <label>1. Have you decided what you want to do after 10th grade?</label><br>
+          <input type="radio" id="yes" name="decided" value="yes" required> Yes
+          <input type="radio" id="no" name="decided" value="no"> No
+        </div>
+
+        <div class="question">
+          <label>2. What are your interests?</label><br>
+          <input type="checkbox" id="science" name="interests" value="Science"> Science
+          <input type="checkbox" id="arts" name="interests" value="Arts"> Arts
+          <input type="checkbox" id="commerce" name="interests" value="Commerce"> Commerce
+          <input type="checkbox" id="sports" name="interests" value="Sports"> Sports
+        </div>
+
+        <div class="question">
+          <label>3. What is your future goal?</label><br>
+          <input type="radio" id="entrepreneur" name="goal" value="Entrepreneur" required> Entrepreneur
+          <input type="radio" id="doctor" name="goal" value="Doctor"> Doctor
+          <input type="radio" id="engineer" name="goal" value="Engineer"> Engineer
+          <input type="radio" id="artist" name="goal" value="Artist"> Artist
+        </div>
+
+        <div class="question">
+          <label>4. Which subject do you enjoy the most?</label><br>
+          <input type="radio" id="math" name="subject" value="Math"> Math
+          <input type="radio" id="biology" name="subject" value="Biology"> Biology
+          <input type="radio" id="history" name="subject" value="History"> History
+          <input type="radio" id="computer" name="subject" value="Computer Science"> Computer Science
+        </div>
+
+        <div class="question">
+          <label>5. Do you prefer theoretical or practical work?</label><br>
+          <input type="radio" id="theoretical" name="work-type" value="Theoretical"> Theoretical
+          <input type="radio" id="practical" name="work-type" value="Practical"> Practical
+        </div>
+
+        <div class="question">
+          <label>6. Are you comfortable with teamwork?</label><br>
+          <input type="radio" id="teamwork-yes" name="teamwork" value="yes"> Yes
+          <input type="radio" id="teamwork-no" name="teamwork" value="no"> No
+        </div>
+
+        <div class="question">
+          <label>7. Do you like to solve complex problems?</label><br>
+          <input type="radio" id="yes-problem-solving" name="problem-solving" value="yes"> Yes
+          <input type="radio" id="no-problem-solving" name="problem-solving" value="no"> No
+        </div>
+
+        <div class="question">
+          <label>8. How do you handle challenges?</label><br>
+          <input type="radio" id="patient" name="challenge" value="Patient"> Patient
+          <input type="radio" id="impulsive" name="challenge" value="Impulsive"> Impulsive
+          <input type="radio" id="calm" name="challenge" value="Calm"> Calm
+        </div>
+
+        <div class="question">
+          <label>9. Do you prefer to work independently or in a team?</label><br>
+          <input type="radio" id="independent" name="work-preference" value="Independent"> Independent
+          <input type="radio" id="team" name="work-preference" value="Team"> Team
+        </div>
+
+        <div class="question">
+          <label>10. Would you like to travel or work in different countries?</label><br>
+          <input type="radio" id="travel-yes" name="travel" value="yes"> Yes
+          <input type="radio" id="travel-no" name="travel" value="no"> No
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="roadmap-container" class="roadmap-container" style="display: none;">
+        <!-- <h3>Your Career Roadmap</h3> -->
+        <div id="roadmap"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Career Awareness. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>

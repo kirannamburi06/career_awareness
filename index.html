@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Awareness for 10th Graders</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <h2>Career Awareness</h2>
+      <ul>
+        <li class="special"><a href="career-paths.html">Career Paths</a></li>
+        <li class="special"><a href="About-us.html">About us</a></li>
+        <li class="special"><a href="resources.html">Resources</a></li> 
+        <li class="special"><a href="quiz.html">Take the Quiz</a></li>
+        <li class="special"><a href="login.html">Login/SignUp</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="intro" style="background-image: url('images/intro.jpg');">
+      <h2><span id="dynamic-text"></span><span class="cursor">|</span></h2>
+      <p>Discover streams, courses, and opportunities that align with your dreams.</p>
+    </section> 
+
+    <section class="explore">
+      <h2>Explore Career Paths</h2>
+      <p>Explore different career paths based on your interests and skills. Find out what suits you the most by browsing through various fields and streams.</p>
+      <ul><li><a href="career-paths.html" class="btn">Explore Career Paths</a></li></ul>
+    </section>
+
+    <section class="quiz">
+      <h3>Take the Quiz</h3>
+      <p>Take the quiz to assess your interests and receive a personalized roadmap to help you with your career journey.</p>
+      <ul><li><a href="quiz.html" class="btn">Start Quiz</a></li></ul>
+    </section>
+    <!-- Visitor Counter Section -->
+    <section class="visitor-count">
+      <h3>Visitors: <span id="visitor-count">Loading...</span></h3>
+  </section> 
+  </main>
+  
+  <footer>
+    <p>© 2024 Career Awareness. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const text = "Welcome to your Career Journey"; // The text to be typed
+        const dynamicText = document.getElementById('dynamic-text');
+        const cursor = document.querySelector('.cursor');
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+                dynamicText.textContent += text[index];
+                index++;
+                setTimeout(typeEffect, 150); // Adjust typing speed here
+            } else {
+                setTimeout(() => {
+                    // Clear the text and restart the animation
+                    dynamicText.textContent = "";
+                    index = 0;
+                    typeEffect();
+                }, 2000); // Wait 2 seconds before restarting
+            }
+        }
+
+        typeEffect();
+
+        // Fetch visitor count from PHP backend
+        fetch('php/visitor-counter.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('visitor-count').textContent = data; // Update visitor count on the page
+            })
+            .catch(error => console.error('Error fetching visitor count:', error));
+    });
+</script>
+
+
+</body>
+</html>

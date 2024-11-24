@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <h2>SignUp</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="signup-form">
+      <h2>Sign Up</h2>
+      <form id="signup-form" method="POST" action="php/signup.php">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" required><br>
+
+        <label for="whatsapp">WhatsApp Number:</label>
+        <input type="tel" id="whatsapp" name="whatsapp" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required><br>
+
+        <button type="submit">Sign Up</button>
+      </form>
+      
+      <div class="social-login">
+        <p>Or sign in with:</p>
+        <button class="google-btn">Sign in with Google</button>
+        <button class="facebook-btn">Sign in with Facebook</button>
+      </div>
+
+      <p>Already a member? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Career Awareness. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/signup.js"></script>
+</body>
+</html>
